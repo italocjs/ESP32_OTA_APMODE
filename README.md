@@ -5,3 +5,10 @@ This will increase the program size by ~30 kb,  instead of ~140kb from the orig
 
 reference 1: https://randomnerdtutorials.com/esp32-over-the-air-ota-programming/
 reference 2: https://esp32.com/viewtopic.php?t=11744
+
+
+
+Tips: Using it under ESP-IDF (4.4.4) + arduino component (2.0.9)
+- Create an task to simulate the loop, 2k stack has crashed, i had plenty available so i have been using 16k without any issues.
+- If using C++, remember to user extern "C" void app_main(void)
+
